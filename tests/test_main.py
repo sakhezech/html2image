@@ -7,7 +7,7 @@ import os
 OUTPUT_PATH = "tests_output"
 os.makedirs(OUTPUT_PATH, exist_ok=True)
 
-TEST_BROWSERS = ["edGe", "cHrOme"]
+TEST_BROWSERS = ["edGe", "cHrOme", "FiReFoX"]
 
 def test_bad_browser():
     with pytest.raises(ValueError):
