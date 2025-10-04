@@ -15,9 +15,6 @@ class FirefoxHeadless(Browser):
             + Path to a chrome executable.
         - `flags` : list of str
             + Flags to be used by the headless browser.
-            + Default flags are :
-                - '--default-background-color=00000000'
-                - '--hide-scrollbars'
         - `print_command` : bool
             + Whether or not to print the command used to take a screenshot.
         - `disable_logging` : bool
@@ -27,10 +24,7 @@ class FirefoxHeadless(Browser):
     def __init__(self, executable=None, flags=None, print_command=False, disable_logging=False,):
         self.executable = executable
         if not flags:
-            self.flags = [
-                '--default-background-color=00000000',
-                '--hide-scrollbars',
-            ]
+            self.flags = []
         else:
             self.flags = [flags] if isinstance(flags, str) else flags
 
