@@ -83,6 +83,7 @@ class FirefoxHeadless(Browser):
             f'--window-size={size[0]},{size[1]}',
             *self.flags,
             '--screenshot',
+            '-url',
             f'{input}',
         ]
 
